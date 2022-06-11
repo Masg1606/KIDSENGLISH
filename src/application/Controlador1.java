@@ -20,6 +20,10 @@ import javafx.stage.Stage;
 
 public class Controlador1 implements Initializable {
 	
+	// este controlador es para la pagina principal, activamos los dos botones "Exit" y "Start".
+	
+	//aqui nombramos los botones de la ventana los nombres deben coincidir con los archivos fxml
+	
 	@FXML
 	private Button ExitButton;
 	private Button Start;
@@ -32,12 +36,15 @@ public class Controlador1 implements Initializable {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	// metodo exit para salir del juego
 	@FXML
 	public void Exit (ActionEvent event) {
 		System.exit(0);
 		
 	}
 	
+	// metodo empezar nos carga la ventana de categorias
 	@FXML
 	public void Empezar (ActionEvent event) {
 		

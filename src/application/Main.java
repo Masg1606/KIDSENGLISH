@@ -10,6 +10,8 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+	
+	//Cargamos pantalla principal donde tendra solo dos botones uno para iniciar el juego y otro para salir
 		
 		@Override
 		public void start(Stage primaryStage) {

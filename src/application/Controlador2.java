@@ -20,6 +20,10 @@ import javafx.stage.Stage;
 
 public class Controlador2 implements Initializable {
 	
+	//Este controlador maneja las categorias que tendra el juego
+	
+	// activamos botones de la ventana
+	
 	@FXML
 	private Button ExitButton;
 	private Button Animals;
@@ -35,12 +39,14 @@ public class Controlador2 implements Initializable {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	// metodo exit para salir del juego
 	@FXML
 	public void Exit (ActionEvent event) {
 		System.exit(0);
 		
 	}
-	
+	// metodo que nos carga el menu animals
 	@FXML
 	public void MenuAnimals (ActionEvent event) {
 		
@@ -71,6 +77,7 @@ public class Controlador2 implements Initializable {
 	
 	}
 	
+	// metodo que nos carga el menu Fruits
 	@FXML
 	public void MenuFruits (ActionEvent event) {
 		
@@ -100,6 +107,8 @@ public class Controlador2 implements Initializable {
 		}
 	
 	}
+	
+	// metodo que nos carga el menu Numbers
 	
 	@FXML
 	public void MenuNumbers (ActionEvent event) {
