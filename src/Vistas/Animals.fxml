@@ -20,8 +20,8 @@
             <Image url="@../Imagenes%20juego/tiger.png" />
          </image>
       </ImageView>
-      <Button layoutX="381.0" layoutY="148.0" mnemonicParsing="false" text="Tiger" />
-      <Button layoutX="380.0" layoutY="210.0" mnemonicParsing="false" text="Eagle" />
+      <Button layoutX="379.0" layoutY="75.0" mnemonicParsing="false" text="Tiger" />
+      <Button layoutX="379.0" layoutY="143.0" mnemonicParsing="false" text="Eagle" />
       <Button layoutX="379.0" layoutY="277.0" mnemonicParsing="false" text="Shark" />
       <Button layoutX="470.0" layoutY="333.0" mnemonicParsing="false" text="Exit" />
       <Label layoutX="111.0" layoutY="28.0" text="Which one do you think it is?...">

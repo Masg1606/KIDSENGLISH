@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="532.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="532.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controlador2">
    <children>
       <ImageView fitHeight="400.0" fitWidth="559.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -18,7 +17,7 @@
       <Button layoutX="79.0" layoutY="268.0" mnemonicParsing="false" text="Animals" />
       <Button layoutX="247.0" layoutY="268.0" mnemonicParsing="false" text="Fruits" />
       <Button layoutX="389.0" layoutY="268.0" mnemonicParsing="false" text="Numbers" />
-      <Button layoutX="249.0" layoutY="347.0" mnemonicParsing="false" text="Exit" />
+      <Button fx:id="ExitButton" layoutX="249.0" layoutY="347.0" mnemonicParsing="false" onAction="#Exit" text="Exit" />
       <Label layoutX="120.0" layoutY="148.0" prefHeight="104.0" prefWidth="293.0" text="Choose a Category" textAlignment="CENTER">
          <font>
             <Font name="Comic Sans MS" size="33.0" />
