@@ -10,8 +10,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -20,6 +22,9 @@ public class Controlador2 implements Initializable {
 	
 	@FXML
 	private Button ExitButton;
+	private Button Animals;
+	private Button Fruits;
+	private Button Numbers;
 	
 	
 		
@@ -36,6 +41,94 @@ public class Controlador2 implements Initializable {
 		
 	}
 	
+	@FXML
+	public void MenuAnimals (ActionEvent event) {
+		
+		try {
+
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vistas/Animals.fxml"));
+		
+		Parent root = loader.load();
+		
+		ControladorAnimals controlador = loader.getController();
+		
+		Scene scene = new Scene(root);
+		Stage stage = new Stage();
+		stage.initModality(Modality.APPLICATION_MODAL);
+		stage.setScene(scene);
+		stage.getIcons().add(new Image("Imagenes juego/logo 2.png"));
+		stage.showAndWait();
+		
+		
+		
+		
+		
+		
+	} catch (IOException ex) {
+		Logger.getLogger(Controlador1.class.getName()).log(Level.SEVERE, null, ex);
+		
+		}
 	
+	}
+	
+	@FXML
+	public void MenuFruits (ActionEvent event) {
+		
+		try {
+
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vistas/Fruits.fxml"));
+		
+		Parent root = loader.load();
+		
+		ControladorFruits controlador = loader.getController();
+		
+		Scene scene = new Scene(root);
+		Stage stage = new Stage();
+		stage.initModality(Modality.APPLICATION_MODAL);
+		stage.setScene(scene);
+		stage.getIcons().add(new Image("Imagenes juego/logo 2.png"));
+		stage.showAndWait();
+		
+		
+		
+		
+		
+		
+	} catch (IOException ex) {
+		Logger.getLogger(Controlador1.class.getName()).log(Level.SEVERE, null, ex);
+		
+		}
+	
+	}
+	
+	@FXML
+	public void MenuNumbers (ActionEvent event) {
+		
+		try {
+
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vistas/Numbers.fxml"));
+		
+		Parent root = loader.load();
+		
+		ControladorNumbers controlador = loader.getController();
+		
+		Scene scene = new Scene(root);
+		Stage stage = new Stage();
+		stage.initModality(Modality.APPLICATION_MODAL);
+		stage.setScene(scene);
+		stage.getIcons().add(new Image("Imagenes juego/logo 2.png"));
+		stage.showAndWait();
+		
+		
+		
+		
+		
+		
+	} catch (IOException ex) {
+		Logger.getLogger(Controlador1.class.getName()).log(Level.SEVERE, null, ex);
+		
+		}
+	
+	}
 }
 

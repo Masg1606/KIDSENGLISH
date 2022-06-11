@@ -14,9 +14,9 @@
             <Image url="@../Imagenes%20juego/fondo%20juego%20submenus.png" />
          </image>
       </ImageView>
-      <Button layoutX="79.0" layoutY="268.0" mnemonicParsing="false" text="Animals" />
-      <Button layoutX="247.0" layoutY="268.0" mnemonicParsing="false" text="Fruits" />
-      <Button layoutX="389.0" layoutY="268.0" mnemonicParsing="false" text="Numbers" />
+      <Button fx:id="Animals" layoutX="79.0" layoutY="268.0" mnemonicParsing="false" onAction="#MenuAnimals" text="Animals" />
+      <Button fx:id="Fruits" layoutX="247.0" layoutY="268.0" mnemonicParsing="false" onAction="#MenuFruits" text="Fruits" />
+      <Button fx:id="Numbers" layoutX="389.0" layoutY="268.0" mnemonicParsing="false" onAction="#MenuNumbers" text="Numbers" />
       <Button fx:id="ExitButton" layoutX="249.0" layoutY="347.0" mnemonicParsing="false" onAction="#Exit" text="Exit" />
       <Label layoutX="120.0" layoutY="148.0" prefHeight="104.0" prefWidth="293.0" text="Choose a Category" textAlignment="CENTER">
          <font>

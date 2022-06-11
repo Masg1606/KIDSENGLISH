@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="535.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="535.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControladorNumbers">
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="536.0">
          <children>
@@ -25,7 +24,7 @@
             <Button layoutX="379.0" layoutY="75.0" mnemonicParsing="false" text="One" />
             <Button layoutX="379.0" layoutY="143.0" mnemonicParsing="false" text="Five" />
             <Button layoutX="379.0" layoutY="205.0" mnemonicParsing="false" text="Four" />
-            <Button layoutX="470.0" layoutY="333.0" mnemonicParsing="false" text="Exit" />
+            <Button fx:id="ExitButton" layoutX="470.0" layoutY="333.0" mnemonicParsing="false" onAction="#Exit" text="Exit" />
             <Label layoutX="111.0" layoutY="28.0" text="Which one do you think it is?...">
                <font>
                   <Font name="Comic Sans MS" size="22.0" />
