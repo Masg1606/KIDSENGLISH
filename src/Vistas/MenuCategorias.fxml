@@ -16,10 +16,10 @@
    <children>
       <ImageView fitHeight="480.0" fitWidth="764.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Imagenes%20juego/fondo%20juego%20submenus.png" />
+            <Image url="@../ImagenesJuego/generalAssets/fondo%20juego%20submenus.png" />
          </image>
       </ImageView>
-      <Button fx:id="ExitButton" layoutX="296.0" layoutY="405.0" mnemonicParsing="false" onAction="#Exit" text="Go Back" />
+      <Button fx:id="BackButton" layoutX="296.0" layoutY="405.0" mnemonicParsing="false" onAction="#goBack" text="Go Back" />
       <Label layoutX="180.0" layoutY="143.0" prefHeight="104.0" prefWidth="293.0" text="Choose a Category" textAlignment="CENTER">
          <font>
             <Font name="Comic Sans MS" size="33.0" />
@@ -27,7 +27,7 @@
       </Label>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="226.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Imagenes%20juego/logo%202.png" />
+            <Image url="@../ImagenesJuego/generalAssets/logo%202.png" />
          </image>
       </ImageView>
       <GridPane alignment="CENTER" layoutY="254.0" prefHeight="30.0" prefWidth="640.0">

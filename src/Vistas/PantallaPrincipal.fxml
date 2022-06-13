@@ -14,12 +14,12 @@
    <children>
       <ImageView fitHeight="480.0" fitWidth="685.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Imagenes%20juego/fondo%20juego.png" />
+            <Image url="@../ImagenesJuego/generalAssets/fondo%20juego.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="235.0" fitWidth="357.0" layoutX="146.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Imagenes%20juego/logo%202.png" />
+            <Image url="@../ImagenesJuego/generalAssets/logo%202.png" />
          </image>
       </ImageView>
       <Button fx:id="ExitButton" layoutX="303.0" layoutY="369.0" mnemonicParsing="false" onAction="#Exit" text="Exit" />

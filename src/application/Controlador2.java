@@ -40,15 +40,19 @@ public class Controlador2 implements Initializable {
 		// TODO Auto-generated method stub
 		
 	}
-	
+
 	/**
-	 * Este metodo es para el boton Exit, este cierra la aplicacion
+	 * Este metodo es para el boton Go back, este retorna a la pantalla principal
 	 * @param event evento del boton del componente del fxml
 	 */
 	@FXML
-	public void Exit (ActionEvent event) {
-		System.exit(0);
-		
+	public void goBack(ActionEvent event) {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/Vistas/PantallaPrincipal.fxml"));
+			commonRootLoader(event, root);
+		} catch (IOException ex) {
+			Logger.getLogger(Controlador1.class.getName()).log(Level.SEVERE, null, ex);
+		}
 	}
 
 	/**
