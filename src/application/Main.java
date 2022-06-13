@@ -25,6 +25,7 @@ public class Main extends Application {
 			Pane ventana = (Pane) loader.load();
 			Scene scene = new Scene(ventana);
 			primaryStage.setScene(scene);
+			primaryStage.setTitle("Kids English");
 			primaryStage.getIcons().add(new Image("Imagenes juego/logo 2.png"));
 			primaryStage.show();
 

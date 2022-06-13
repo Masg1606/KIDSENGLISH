@@ -22,6 +22,8 @@ import javafx.stage.Stage;
  */
 public class ControladorAnimals implements Initializable {
 	
+	//TODO Hacer solo un controlador para las tres categorias y evitar repetir código
+	
 	@FXML
 	private Button ExitButton;
 	
