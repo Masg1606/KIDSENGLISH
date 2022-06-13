@@ -16,24 +16,31 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+/**
+ * FXML Controller class
+ * Este controlador es para el juego en la categoria animales
+ */
 public class ControladorAnimals implements Initializable {
 	
 	@FXML
 	private Button ExitButton;
 	
-	
-		
-	
-
+	/**
+	 * Inicializa el controlador de la clase.
+	 */
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		
 	}
+
+	/**
+	 * Este metodo es para el boton Exit, este cierra la aplicacion
+	 * @param event evento del boton del componente del fxml
+	 */
 	@FXML
 	public void Exit (ActionEvent event) {
 		System.exit(0);
-		
 	}
 	
 	
