@@ -51,6 +51,11 @@ public class Controlador2 implements Initializable {
 		
 	}
 
+	/**
+	 * Este metodo recarga la escena de la aplicacion con una nueva escena
+	 * @param event El evento que dispara el cambio de escena
+	 * @param root	La raiz de la escena que se va a cargar
+	 */
 	private void commonRootLoader(ActionEvent event, Parent root) {
 		Scene scene = new Scene(root);
 		Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
