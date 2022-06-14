@@ -26,7 +26,7 @@
          <effect>
             <ImageInput>
                <source>
-                  <Image url="file:/C:/Users/carol/Documents/NetBeansProjects/JavaApplication1/src/Imagenes%20juego/botonsalir.png" />
+                  <Image url="file:@../Imagenes%20juego/botonsalir.png" />
                </source>
             </ImageInput>
          </effect></Button>
@@ -34,7 +34,7 @@
          <effect>
             <ImageInput>
                <source>
-                  <Image url="file:/C:/Users/carol/Documents/NetBeansProjects/JavaApplication1/src/Imagenes%20juego/botoninicio.png" />
+                  <Image url="file:@../Imagenes%20juego/botoninicio.png" />
                </source>
             </ImageInput>
          </effect>
