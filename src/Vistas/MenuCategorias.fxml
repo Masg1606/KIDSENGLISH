@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ImageInput?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -14,10 +16,42 @@
             <Image url="@../Imagenes%20juego/fondo%20juego%20submenus.png" />
          </image>
       </ImageView>
-      <Button fx:id="Animals" layoutX="79.0" layoutY="268.0" mnemonicParsing="false" onAction="#MenuAnimals" text="Animals" />
-      <Button fx:id="Fruits" layoutX="247.0" layoutY="268.0" mnemonicParsing="false" onAction="#MenuFruits" text="Fruits" />
-      <Button fx:id="Numbers" layoutX="389.0" layoutY="268.0" mnemonicParsing="false" onAction="#MenuNumbers" text="Numbers" />
-      <Button fx:id="ExitButton" layoutX="249.0" layoutY="347.0" mnemonicParsing="false" onAction="#Exit" text="Exit" />
+      <Button fx:id="Animals" layoutX="79.0" layoutY="268.0" mnemonicParsing="false" onAction="#MenuAnimals" prefHeight="37.0" prefWidth="106.0" text="Animals">
+         <effect>
+            <ImageInput>
+               <source>
+                  <Image url="file:/C:/Users/carol/Documents/NetBeansProjects/JavaApplication1/src/Imagenes%20juego/Animals.png" />
+               </source>
+            </ImageInput>
+         </effect>
+      </Button>
+      <Button fx:id="Fruits" cache="true" cacheHint="ROTATE" layoutX="231.0" layoutY="268.0" mnemonicParsing="false" onAction="#MenuFruits" opacity="0.91" prefHeight="37.0" prefWidth="106.0" text="Fruits" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets bottom="5.0" left="3.0" right="9.0" top="4.0" />
+         </opaqueInsets>
+         <effect>
+            <ImageInput>
+               <source>
+                  <Image url="file:/C:/Users/carol/Documents/NetBeansProjects/JavaApplication1/src/Imagenes%20juego/Fruits.png" />
+               </source>
+            </ImageInput>
+         </effect></Button>
+      <Button fx:id="Numbers" layoutX="389.0" layoutY="268.0" mnemonicParsing="false" onAction="#MenuNumbers" prefHeight="37.0" prefWidth="106.0" text="Numbers">
+         <effect>
+            <ImageInput>
+               <source>
+                  <Image url="file:/C:/Users/carol/Documents/NetBeansProjects/JavaApplication1/src/Imagenes%20juego/Numbers.png" />
+               </source>
+            </ImageInput>
+         </effect></Button>
+      <Button fx:id="ExitButton" layoutX="240.0" layoutY="343.0" mnemonicParsing="false" onAction="#Exit" prefHeight="37.0" prefWidth="88.0" text="Exit">
+         <effect>
+            <ImageInput>
+               <source>
+                  <Image url="file:/C:/Users/carol/Documents/NetBeansProjects/JavaApplication1/src/Imagenes%20juego/exit.png" />
+               </source>
+            </ImageInput>
+         </effect></Button>
       <Label layoutX="120.0" layoutY="148.0" prefHeight="104.0" prefWidth="293.0" text="Choose a Category" textAlignment="CENTER">
          <font>
             <Font name="Comic Sans MS" size="33.0" />

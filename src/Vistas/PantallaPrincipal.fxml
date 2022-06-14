@@ -2,9 +2,13 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ImageInput?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
 
 <AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="532.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controlador1">
    <children>
@@ -18,8 +22,25 @@
             <Image url="@../Imagenes%20juego/logo%202.png" />
          </image>
       </ImageView>
-      <Button fx:id="ExitButton" layoutX="243.0" layoutY="328.0" mnemonicParsing="false" onAction="#Exit" text="Exit" />
-      <Button fx:id="Start" layoutX="240.0" layoutY="249.0" mnemonicParsing="false" onAction="#Empezar" text="Start" />
+      <Button fx:id="ExitButton" layoutX="192.0" layoutY="308.0" mnemonicParsing="false" onAction="#Exit" prefHeight="66.0" prefWidth="149.0" text="Exit">
+         <effect>
+            <ImageInput>
+               <source>
+                  <Image url="file:/C:/Users/carol/Documents/NetBeansProjects/JavaApplication1/src/Imagenes%20juego/botonsalir.png" />
+               </source>
+            </ImageInput>
+         </effect></Button>
+      <Button fx:id="Start" layoutX="192.0" layoutY="230.0" mnemonicParsing="false" onAction="#Empezar" prefHeight="60.0" prefWidth="149.0" text="Start" textAlignment="CENTER" textFill="#1b0101" textOverrun="CLIP" wrapText="true">
+         <effect>
+            <ImageInput>
+               <source>
+                  <Image url="file:/C:/Users/carol/Documents/NetBeansProjects/JavaApplication1/src/Imagenes%20juego/botoninicio.png" />
+               </source>
+            </ImageInput>
+         </effect>
+         <font>
+            <Font name="Jokerman" size="12.0" />
+         </font></Button>
       <Label layoutX="369.0" layoutY="361.0" prefHeight="25.0" prefWidth="149.0" text="Programmed by team 10 " textFill="WHITE" />
    </children>
-</AnchorPane>
+   </AnchorPane>

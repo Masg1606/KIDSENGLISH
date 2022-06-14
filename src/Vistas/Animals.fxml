@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ImageInput?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -19,10 +20,26 @@
             <Image url="@../Imagenes%20juego/tiger.png" />
          </image>
       </ImageView>
-      <Button layoutX="379.0" layoutY="75.0" mnemonicParsing="false" text="Tiger" />
-      <Button layoutX="379.0" layoutY="143.0" mnemonicParsing="false" text="Eagle" />
-      <Button layoutX="379.0" layoutY="210.0" mnemonicParsing="false" text="Shark" />
-      <Button fx:id="ExitButton" layoutX="470.0" layoutY="333.0" mnemonicParsing="false" onAction="#Exit" text="Exit" />
+      <Button layoutX="379.0" layoutY="75.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="106.0" style="-fx-background-image: url(file:/C:/Users/carol/Documents/NetBeansProjects/JavaApplication1/src/Imagenes%20juego/botonverde.png);" text="Tiger" textFill="#185c01">
+         <font>
+            <Font name="Bowlby One SC Regular" size="13.0" />
+         </font></Button>
+      <Button layoutX="379.0" layoutY="143.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="106.0" style="-fx-background-image: url(file:/C:/Users/carol/Documents/NetBeansProjects/JavaApplication1/src/Imagenes%20juego/botonverde.png);" text="Eagle" textFill="#185c01">
+         <font>
+            <Font name="Bowlby One SC Regular" size="13.0" />
+         </font></Button>
+      <Button layoutX="379.0" layoutY="210.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="106.0" style="-fx-background-image: url(file:/C:/Users/carol/Documents/NetBeansProjects/JavaApplication1/src/Imagenes%20juego/botonverde.png);" text="Shark" textFill="#185c01">
+         <font>
+            <Font name="Bowlby One SC Regular" size="13.0" />
+         </font></Button>
+      <Button fx:id="ExitButton" layoutX="432.0" layoutY="285.0" mnemonicParsing="false" onAction="#Exit" prefHeight="54.0" prefWidth="52.0" text="Exit">
+         <effect>
+            <ImageInput>
+               <source>
+                  <Image url="file:/C:/Users/carol/Documents/NetBeansProjects/JavaApplication1/src/Imagenes%20juego/close.png" />
+               </source>
+            </ImageInput>
+         </effect></Button>
       <Label layoutX="111.0" layoutY="28.0" text="Which one do you think it is?...">
          <font>
             <Font name="Comic Sans MS" size="22.0" />

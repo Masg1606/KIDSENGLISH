@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ImageInput?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -11,7 +13,7 @@
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="536.0">
          <children>
-            <ImageView fitHeight="407.0" fitWidth="545.0" layoutX="-7.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="407.0" fitWidth="545.0" layoutX="-7.0" layoutY="-5.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Imagenes%20juego/fondo%20juego%20submenus.png" />
                </image>
@@ -21,10 +23,47 @@
                   <Image url="@../Imagenes%20juego/numero%204.png" />
                </image>
             </ImageView>
-            <Button layoutX="379.0" layoutY="75.0" mnemonicParsing="false" text="One" />
-            <Button layoutX="379.0" layoutY="143.0" mnemonicParsing="false" text="Five" />
-            <Button layoutX="379.0" layoutY="205.0" mnemonicParsing="false" text="Four" />
-            <Button fx:id="ExitButton" layoutX="470.0" layoutY="333.0" mnemonicParsing="false" onAction="#Exit" text="Exit" />
+            <Button layoutX="379.0" layoutY="75.0" mnemonicParsing="false" opacity="0.94" prefHeight="39.0" prefWidth="107.0" style="-fx-background-image: url(file:/C:/Users/carol/Documents/NetBeansProjects/JavaApplication1/src/Imagenes%20juego/botonazulc.png);" text="One">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font name="Bowlby One SC Regular" size="12.0" />
+               </font>
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="file:/C:/Users/carol/Documents/NetBeansProjects/JavaApplication1/src/Imagenes%20juego/botonazulc.png" />
+                     </source>
+                  </ImageInput>
+               </effect></Button>
+            <Button layoutX="379.0" layoutY="143.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="107.0">
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="file:/C:/Users/carol/Documents/NetBeansProjects/JavaApplication1/src/Imagenes%20juego/botonazulfive.png" />
+                     </source>
+                  </ImageInput>
+               </effect></Button>
+            <Button layoutX="379.0" layoutY="205.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="107.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="file:/C:/Users/carol/Documents/NetBeansProjects/JavaApplication1/src/Imagenes%20juego/botonazulfour.png" />
+                     </source>
+                  </ImageInput>
+               </effect></Button>
+            <Button fx:id="ExitButton" layoutX="425.0" layoutY="293.0" mnemonicParsing="false" onAction="#Exit" prefHeight="50.0" prefWidth="52.0" text="Exit">
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="file:/C:/Users/carol/Documents/NetBeansProjects/JavaApplication1/src/Imagenes%20juego/close.png" />
+                     </source>
+                  </ImageInput>
+               </effect></Button>
             <Label layoutX="111.0" layoutY="28.0" text="Which one do you think it is?...">
                <font>
                   <Font name="Comic Sans MS" size="22.0" />
