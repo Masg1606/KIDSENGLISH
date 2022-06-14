@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -53,15 +54,11 @@ public class Controlador1 implements Initializable {
 	@FXML
 	public void Empezar (ActionEvent event) {	
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vistas/MenuCategorias.fxml"));
-			Parent root = loader.load();
-			Controlador2 controlador = loader.getController();
+			Parent root = FXMLLoader.load(getClass().getResource("/Vistas/MenuCategorias.fxml"));
 			Scene scene = new Scene(root);
-			Stage stage = new Stage();
-			stage.initModality(Modality.APPLICATION_MODAL);
+			Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
 			stage.setScene(scene);
-			stage.getIcons().add(new Image("Imagenes juego/logo 2.png"));
-			stage.showAndWait();	
+			stage.show();	
 		} catch (IOException ex) {
 			Logger.getLogger(Controlador1.class.getName()).log(Level.SEVERE, null, ex);
 		}

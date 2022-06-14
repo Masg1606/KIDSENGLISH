@@ -10,6 +10,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
@@ -21,6 +23,8 @@ import javafx.stage.Stage;
  * Este controlador es para el juego en la categoria animales
  */
 public class ControladorAnimals implements Initializable {
+	
+	//TODO Hacer solo un controlador para las tres categorias y evitar repetir código
 	
 	@FXML
 	private Button ExitButton;
@@ -35,14 +39,20 @@ public class ControladorAnimals implements Initializable {
 	}
 
 	/**
-	 * Este metodo es para el boton Exit, este cierra la aplicacion
+	 * Este metodo es para el boton Go back, este retorna a la pantalla principal
 	 * @param event evento del boton del componente del fxml
 	 */
 	@FXML
-	public void Exit (ActionEvent event) {
-		System.exit(0);
+	public void goBack(ActionEvent event) {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/Vistas/PantallaPrincipal.fxml"));
+			Scene scene = new Scene(root);
+			Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+			stage.setScene(scene);
+			stage.show();
+		} catch (IOException ex) {
+			Logger.getLogger(Controlador1.class.getName()).log(Level.SEVERE, null, ex);
+		}
 	}
-	
-	
 }
 

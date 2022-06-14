@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -39,15 +40,31 @@ public class Controlador2 implements Initializable {
 		// TODO Auto-generated method stub
 		
 	}
-	
+
 	/**
-	 * Este metodo es para el boton Exit, este cierra la aplicacion
+	 * Este metodo es para el boton Go back, este retorna a la pantalla principal
 	 * @param event evento del boton del componente del fxml
 	 */
 	@FXML
-	public void Exit (ActionEvent event) {
-		System.exit(0);
-		
+	public void goBack(ActionEvent event) {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/Vistas/PantallaPrincipal.fxml"));
+			commonRootLoader(event, root);
+		} catch (IOException ex) {
+			Logger.getLogger(Controlador1.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
+
+	/**
+	 * Este metodo recarga la escena de la aplicacion con una nueva escena
+	 * @param event El evento que dispara el cambio de escena
+	 * @param root	La raiz de la escena que se va a cargar
+	 */
+	private void commonRootLoader(ActionEvent event, Parent root) {
+		Scene scene = new Scene(root);
+		Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+		stage.setScene(scene);
+		stage.show();
 	}
 	
 	/**
@@ -58,14 +75,8 @@ public class Controlador2 implements Initializable {
 	public void MenuAnimals (ActionEvent event) {	
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vistas/Animals.fxml"));
-			Parent root = loader.load();	
-			ControladorAnimals controlador = loader.getController();
-			Scene scene = new Scene(root);
-			Stage stage = new Stage();
-			stage.initModality(Modality.APPLICATION_MODAL);
-			stage.setScene(scene);
-			stage.getIcons().add(new Image("Imagenes juego/logo 2.png"));
-			stage.showAndWait();
+			Parent root = loader.load();
+			commonRootLoader(event, root);
 		} catch (IOException ex) {
 			Logger.getLogger(Controlador1.class.getName()).log(Level.SEVERE, null, ex);
 		}
@@ -80,13 +91,7 @@ public class Controlador2 implements Initializable {
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vistas/Fruits.fxml"));
 			Parent root = loader.load();
-			ControladorFruits controlador = loader.getController();
-			Scene scene = new Scene(root);
-			Stage stage = new Stage();
-			stage.initModality(Modality.APPLICATION_MODAL);
-			stage.setScene(scene);
-			stage.getIcons().add(new Image("Imagenes juego/logo 2.png"));
-			stage.showAndWait();
+			commonRootLoader(event, root);
 		} catch (IOException ex) {
 			Logger.getLogger(Controlador1.class.getName()).log(Level.SEVERE, null, ex);
 		}
@@ -101,13 +106,7 @@ public class Controlador2 implements Initializable {
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vistas/Numbers.fxml"));
 			Parent root = loader.load();
-			ControladorNumbers controlador = loader.getController();
-			Scene scene = new Scene(root);
-			Stage stage = new Stage();
-			stage.initModality(Modality.APPLICATION_MODAL);
-			stage.setScene(scene);
-			stage.getIcons().add(new Image("Imagenes juego/logo 2.png"));
-			stage.showAndWait();
+			commonRootLoader(event, root);
 		} catch (IOException ex) {
 			Logger.getLogger(Controlador1.class.getName()).log(Level.SEVERE, null, ex);
 		}
