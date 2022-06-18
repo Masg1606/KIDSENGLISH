@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ImageInput?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControladorAnimals4">
+   <children>
+      <ImageView fitHeight="480.0" fitWidth="674.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ImagenesJuego/generalAssets/fondo%20juego%20submenus.png" />
+         </image>
+      </ImageView>
+      <BorderPane layoutX="70.0" prefHeight="480.0" prefWidth="510.0">
+         <left>
+            <ImageView fitHeight="318.0" fitWidth="245.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../ImagenesJuego/animals/Donkey.png" />
+               </image>
+            </ImageView>
+         </left>
+         <right>
+            <GridPane prefHeight="342.0" prefWidth="96.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="59.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                 <Button mnemonicParsing="false" onAction="#Horse" prefHeight="30.0" prefWidth="97.0" style="-fx-background-color: #7B8EA6;" text="Horse" textFill="#fffbf7" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Bowlby One SC Regular" size="13.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX">
+                           <color>
+                              <Color red="0.46052631735801697" green="0.23943103849887848" blue="0.07035818696022034" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
+                 </Button>
+                 <Button mnemonicParsing="false" onAction="#Bull" prefHeight="30.0" prefWidth="97.0" style="-fx-background-color: #7B8EA6;" text="Bull" textFill="#fcf6f1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Bowlby One SC Regular" size="13.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX">
+                           <color>
+                              <Color red="0.46052631735801697" green="0.23943103849887848" blue="0.07035818696022034" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
+                 </Button>
+                  <Button mnemonicParsing="false" onAction="#Donkey" prefHeight="30.0" prefWidth="97.0" style="-fx-background-color: #7B8EA6;" text="Donkey" textFill="#fffbf7" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Bowlby One SC Regular" size="13.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX">
+                           <color>
+                              <Color red="0.46052631735801697" green="0.23943103849887848" blue="0.07035818696022034" />
+                           </color>
+                        </InnerShadow>
+                     </effect></Button>
+                  <Button fx:id="BackButton" maxWidth="-Infinity" mnemonicParsing="false" onAction="#goBack" prefHeight="48.0" prefWidth="152.0" text="Go back" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="4" GridPane.vgrow="SOMETIMES">
+                     <effect>
+                        <ImageInput>
+                           <source>
+                              <Image url="file:/C:/Users/carol/Documents/NetBeansProjects/JavaApplication1/src/Imagenes%20juego/goback.png" />
+                           </source>
+                        </ImageInput>
+                     </effect>
+                  </Button>
+               </children>
+            </GridPane>
+         </right>
+      </BorderPane>
+      <Label layoutX="168.0" layoutY="57.0" text="Which one do you think it is?...">
+         <font>
+            <Font name="Comic Sans MS" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

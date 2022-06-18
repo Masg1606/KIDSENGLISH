@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ImageInput?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControladorAnimals">
+<children>
+   <ImageView fitHeight="480.0" fitWidth="674.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../ImagenesJuego/generalAssets/fondo%20juego%20submenus.png" />
+      </image>
+   </ImageView>
+   <BorderPane layoutX="70.0" prefHeight="480.0" prefWidth="510.0">
+      <left>
+         <ImageView fitHeight="318.0" fitWidth="245.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+            <image>
+               <Image url="@../ImagenesJuego/fruits/fresa.png" />
+            </image>
+         </ImageView>
+      </left>
+      <right>
+         <GridPane prefHeight="342.0" prefWidth="96.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="59.0" />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+               <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: #EF2549;" text="Apple" textFill="WHITE" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Bowlby One SC Regular" size="13.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color red="0.3960784375667572" green="0.0470588244497776" blue="0.0470588244497776" />
+                           </color>
+                        </InnerShadow>
+                     </effect></Button>
+               <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #EF2549;" text="Orange" textFill="WHITE" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Bowlby One SC Regular" size="13.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color red="0.3960784375667572" green="0.0470588244497776" blue="0.0470588244497776" />
+                           </color>
+                        </InnerShadow>
+                     </effect></Button>
+               <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #EF2549;" text="Strawberry" textFill="WHITE" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Bowlby One SC Regular" size="11.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color red="0.3960784375667572" green="0.0470588244497776" blue="0.0470588244497776" />
+                           </color>
+                        </InnerShadow>
+                     </effect></Button>
+               <Button fx:id="BackButton" mnemonicParsing="false" onAction="#goBack" text="Go back" GridPane.rowIndex="4">
+                     <effect>
+                        <ImageInput>
+                           <source>
+                              <Image url="file:/C:/Users/carol/Documents/NetBeansProjects/JavaApplication1/src/Imagenes%20juego/goback.png" />
+                           </source>
+                        </ImageInput>
+                     </effect>
+                  </Button>
+            </children>
+         </GridPane>
+      </right>
+   </BorderPane>
+   <Label layoutX="168.0" layoutY="57.0" text="Which one do you think it is?...">
+      <font>
+         <Font name="Comic Sans MS" size="22.0" />
+      </font>
+   </Label>
+</children>
+</AnchorPane>
