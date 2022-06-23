@@ -22,6 +22,9 @@ public class ControladorFruits implements Initializable {
 	
 	@FXML
 	private Button ExitButton;
+	private Button ButtonApple;
+	private Button ButtonOrange;
+	private Button ButtonStraw;
 	
 	
 		
@@ -49,4 +52,39 @@ public class ControladorFruits implements Initializable {
 		}
 	}
 	
+	public void ComprobarApple (ActionEvent event) {	
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/Vistas/IntentaDeNuevo.fxml"));
+			Scene scene = new Scene(root);
+			Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+			stage.setScene(scene);
+			stage.show();	
+		} catch (IOException ex) {
+			Logger.getLogger(Controlador1.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
+	
+	public void ComprobarOrange (ActionEvent event) {	
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/Vistas/IntentaDeNuevo.fxml"));
+			Scene scene = new Scene(root);
+			Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+			stage.setScene(scene);
+			stage.show();	
+		} catch (IOException ex) {
+			Logger.getLogger(Controlador1.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
+	
+	public void ComprobarStraw (ActionEvent event) {	
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/Vistas/RespuestaCorrecta.fxml"));
+			Scene scene = new Scene(root);
+			Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+			stage.setScene(scene);
+			stage.show();	
+		} catch (IOException ex) {
+			Logger.getLogger(Controlador1.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
 }

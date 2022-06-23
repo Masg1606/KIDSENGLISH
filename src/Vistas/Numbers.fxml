@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControladorAnimals">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControladorNumbers">
 <children>
    <ImageView fitHeight="480.0" fitWidth="674.0" pickOnBounds="true" preserveRatio="true">
       <image>
@@ -33,9 +39,9 @@
                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-               <Button mnemonicParsing="false" text="One" GridPane.rowIndex="3" />
-               <Button mnemonicParsing="false" text="Five" GridPane.rowIndex="2" />
-               <Button mnemonicParsing="false" text="Four" GridPane.rowIndex="1" />
+               <Button fx:id="ButtonOne" mnemonicParsing="false" onAction="#ComprobarOne" text="One" GridPane.rowIndex="3" />
+               <Button fx:id="ButtonFive" mnemonicParsing="false" onAction="#ComprobarFive" text="Five" GridPane.rowIndex="2" />
+               <Button fx:id="ButtonFour" mnemonicParsing="false" onAction="#ComprobarFour" text="Four" GridPane.rowIndex="1" />
             </children>
          </GridPane>
       </right>

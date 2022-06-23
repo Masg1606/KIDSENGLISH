@@ -22,6 +22,9 @@ public class ControladorNumbers implements Initializable {
 	
 	@FXML
 	private Button ExitButton;
+	private Button ButtonFour;
+	private Button ButtonFive;
+	private Button ButtonOne;
 	
 	
 		
@@ -49,4 +52,39 @@ public class ControladorNumbers implements Initializable {
 		}
 	}
 	
+	public void ComprobarFour (ActionEvent event) {	
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/Vistas/RespuestaCorrecta.fxml"));
+			Scene scene = new Scene(root);
+			Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+			stage.setScene(scene);
+			stage.show();	
+		} catch (IOException ex) {
+			Logger.getLogger(Controlador1.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
+	
+	public void ComprobarFive (ActionEvent event) {	
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/Vistas/IntentaDeNuevo.fxml"));
+			Scene scene = new Scene(root);
+			Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+			stage.setScene(scene);
+			stage.show();	
+		} catch (IOException ex) {
+			Logger.getLogger(Controlador1.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
+	
+	public void ComprobarOne (ActionEvent event) {	
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/Vistas/IntentaDeNuevo.fxml"));
+			Scene scene = new Scene(root);
+			Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+			stage.setScene(scene);
+			stage.show();	
+		} catch (IOException ex) {
+			Logger.getLogger(Controlador1.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
 }
