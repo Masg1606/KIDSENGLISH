@@ -74,10 +74,12 @@ public class Controlador2 implements Initializable {
 	@FXML
 	public void MenuAnimals (ActionEvent event) {	
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vistas/Animals.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vistas/Game.fxml"));
 			Parent root = loader.load();
+			ControladorGame cg = loader.getController();
+			cg.setCategory(cg.CATEGORIA_ANIMALES);
 			commonRootLoader(event, root);
-		} catch (IOException ex) {
+		} catch (Exception ex) {
 			Logger.getLogger(Controlador1.class.getName()).log(Level.SEVERE, null, ex);
 		}
 	}
@@ -89,10 +91,12 @@ public class Controlador2 implements Initializable {
 	@FXML
 	public void MenuFruits (ActionEvent event) {
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vistas/Fruits.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vistas/Game.fxml"));
 			Parent root = loader.load();
+			ControladorGame cg = loader.getController();
+			cg.setCategory(cg.CATEGORIA_FRUTAS);
 			commonRootLoader(event, root);
-		} catch (IOException ex) {
+		} catch (Exception ex) {
 			Logger.getLogger(Controlador1.class.getName()).log(Level.SEVERE, null, ex);
 		}
 	}
@@ -104,10 +108,12 @@ public class Controlador2 implements Initializable {
 	@FXML
 	public void MenuNumbers (ActionEvent event) {
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vistas/Numbers.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vistas/Game.fxml"));
 			Parent root = loader.load();
+			ControladorGame cg = loader.getController();
+			cg.setCategory(cg.CATEGORIA_NUMEROS);
 			commonRootLoader(event, root);
-		} catch (IOException ex) {
+		} catch (Exception ex) {
 			Logger.getLogger(Controlador1.class.getName()).log(Level.SEVERE, null, ex);
 		}
 	}
