@@ -19,6 +19,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
@@ -47,6 +48,8 @@ public class ControladorGame implements Initializable {
 	private Button opt3;
 	@FXML
 	private ImageView iv;
+	@FXML
+	private Label scoreLabel;
 	
 	private int currentCategory = 0;
 	
@@ -66,6 +69,13 @@ public class ControladorGame implements Initializable {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	private void commonRootLoader(ActionEvent event, Parent root) {
+		Scene scene = new Scene(root);
+		Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+		stage.setScene(scene);
+		stage.show();
+	}
 
 	/**
 	 * Este metodo es para el boton Go back, este retorna a la pantalla principal
@@ -75,28 +85,35 @@ public class ControladorGame implements Initializable {
 	public void goBack(ActionEvent event) {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("/Vistas/PantallaPrincipal.fxml"));
-			Scene scene = new Scene(root);
-			Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-			stage.setScene(scene);
-			stage.show();
+			commonRootLoader(event, root);
 		} catch (IOException ex) {
 			Logger.getLogger(Controlador1.class.getName()).log(Level.SEVERE, null, ex);
 		}
 	}
 	
 	public void checkAnswer(ActionEvent event) {
+		Object node = event.getSource();
+		Button pButton = (Button)node;
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("/Vistas/PantallaPrincipal.fxml"));
-			Scene scene = new Scene(root);
-			Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-			stage.setScene(scene);
-			stage.show();
-		} catch (IOException ex) {
+			if(pButton.getText().equals(currentObject.getCorrectOption())) {
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vistas/RespuestaCorrecta.fxml"));
+				Parent root = loader.load();
+				ControladorGame cGame = loader.getController();
+				cGame.setItems(currentList);
+				cGame.setCurrentCategory(currentCategory);
+				cGame.setCurrentScore(currentScore+1);
+				commonRootLoader(event, root);
+			} else {
+				Parent root = FXMLLoader.load(getClass().getResource("/Vistas/IntentaDeNuevo.fxml"));
+				commonRootLoader(event, root);
+			}
+			
+		} catch (Exception ex) {
 			Logger.getLogger(Controlador1.class.getName()).log(Level.SEVERE, null, ex);
 		}
 	}
 
-	public void setCategory(int categoryNum) throws Exception {
+	public void startCategory(int categoryNum) throws Exception {
 		if(categoryNum == CATEGORIA_ANIMALES) {
 			currentCategory = CATEGORIA_ANIMALES;
 			currentImgUrl = COMMON_IMAGE_URL + "animals/";
@@ -107,12 +124,13 @@ public class ControladorGame implements Initializable {
 			currentCategory = CATEGORIA_NUMEROS;
 			currentImgUrl = COMMON_IMAGE_URL + "numbers/";
 		}
-		loadItems();
+		if (currentList == null) loadItems();
 		if (currentList != null) {
 			currentObject = currentList.remove(0);
 			opt1.setText(currentObject.getOptions().get(0));
 			opt2.setText(currentObject.getOptions().get(1));
 			opt3.setText(currentObject.getOptions().get(2));
+			scoreLabel.setText(currentScore + "");
 			setNewImage();
 		} else {
 			throw new Exception("items could not be loaded");
@@ -143,6 +161,57 @@ public class ControladorGame implements Initializable {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void resetGame(ActionEvent event) {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/Vistas/MenuCategorias.fxml"));
+			commonRootLoader(event, root);
+		} catch (Exception ex) {
+			Logger.getLogger(Controlador1.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
+	
+	@FXML
+	public void goNext(ActionEvent event) {
+		try {
+			FXMLLoader loader;
+			Parent root;
+			if(currentList.size() > 0) {
+				loader = new FXMLLoader(getClass().getResource("/Vistas/Game.fxml"));
+				root = loader.load();
+				ControladorGame cGame = loader.getController();
+				cGame.setItems(currentList);
+				cGame.setCurrentScore(currentScore);
+				cGame.startCategory(currentCategory);
+			} else {
+				loader = new FXMLLoader(getClass().getResource("/Vistas/GameOver.fxml"));
+				root = loader.load();
+				ControladorGame cGame = loader.getController();
+				cGame.setCurrentScore(currentScore);
+				cGame.updateScoreLabel();
+			}
+			
+			commonRootLoader(event, root);
+		} catch (Exception ex) {
+			Logger.getLogger(Controlador1.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
+	
+	private void setItems(ArrayList<StageObject> pList) {
+		currentList = pList;
+	}
+	
+	private void setCurrentCategory(int categoryNum) {
+		currentCategory = categoryNum;
+	}
+	
+	private void setCurrentScore(int score) {
+		currentScore = score;
+	}
+	
+	private void updateScoreLabel() {
+		scoreLabel.setText(currentScore + "");
 	}
 }
 

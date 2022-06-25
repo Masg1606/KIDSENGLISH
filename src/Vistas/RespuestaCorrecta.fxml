@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -7,16 +12,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControladorAnimals">
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControladorGame">
    <children>
+      <ImageView fitHeight="487.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ImagenesJuego/generalAssets/fondo%20juego%20submenus.png" />
+         </image>
+      </ImageView>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0">
          <children>
-            <ImageView fitHeight="511.0" fitWidth="669.0" layoutX="-27.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../ImagenesJuego/generalAssets/fondo%20juego%20submenus.png" />
-               </image>
-            </ImageView>
-            <Button fx:id="BackButton" layoutX="566.0" layoutY="431.0" mnemonicParsing="false" onAction="#goBack" text="Go back" />
             <ImageView fitHeight="363.0" fitWidth="419.0" layoutX="128.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../ImagenesJuego/generalAssets/Correcto.png" />
@@ -27,6 +31,7 @@
                   <Font name="Comic Sans MS" size="60.0" />
                </font>
             </Label>
+            <Button layoutX="547.0" layoutY="435.0" mnemonicParsing="false" onAction="#goNext" text="Go Next" />
          </children>
       </AnchorPane>
    </children>
